@@ -7,6 +7,8 @@
 
 --no-module：generate命令的参数，根据字面意思也能猜出来，不生成module。在实际项目中根据实际情况来选择是否生成module来实现模块封装。
 
+***
+
 3. 在demo中使用了modal来完成地区的选择，主要是为了方便反向传值。
 
 viewCtrl传值给modalCtrl属于正向传值，通过构造函数即可完成。
@@ -26,7 +28,8 @@ modalCtrl传值给viewCtrl属于反向传值，通过dismiss(data)完成。
 
     // 在modalCtrl中反向传值
     this.viewCtrl.dismiss(this.selectedArea);
-    
+    
+***
 
 4.  生成provider，提供Http服务，ionic generate provider area-modal。
 
@@ -61,6 +64,7 @@ area.json文件存放到www目录中才能被访问到。以此推理，其他�
     </ion-row>
     </ion-toolbar>
     </ion-header>
-    
+    
+***
 
 6. 地区选择页面未实现滑动效果
