@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <div padding *ngIf="selectedAreaData.length>0">
+    <p>已选择地区</p>
+    <p>{{selectedAreaData[0].text}}-{{selectedAreaData[1].text}}-{{selectedAreaData[2].text}}</p>
+  </div>
+  <div *ngIf="!selectedAreaData || selectedAreaData.length == 0" padding style="height:114px">
+    <p>请选择地区</p>
+  </div>
+<button ion-button block (click)="doSelectAreaAction()">点击选择地区</button>
+</ion-content>

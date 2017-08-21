@@ -1,0 +1,32 @@
+<!--
+  Generated template for the AreaModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar>
+    <ion-title>选择地区</ion-title>
+    <ion-buttons left>
+      <button ion-button (click)="dismiss()" icon-only>
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-row>
+    <ion-col *ngFor="let data of selectedArea; let i = index">
+      <button ion-button full small clear (click)="doSwitchAreaAction(i)">{{data.text}}</button>
+    </ion-col>
+    </ion-row>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <button ion-item selected="true" *ngFor="let data of showData" (click)="itemClicked(data)" [ngClass]="{'item-sel':data.value == selectedArea[selectedIndex].value}">{{data.text}}</button>
+  </ion-list>
+</ion-content>
